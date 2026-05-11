@@ -1,0 +1,14 @@
+---
+- name: Loop to install all listed packages
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Install multiple packages
+      dnf:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - tree
+        - wget
+        - net-tools

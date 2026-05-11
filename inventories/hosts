@@ -1,0 +1,6 @@
+[webservers]
+servera
+serverb
+
+[webservers:vars]
+ansible_user=student

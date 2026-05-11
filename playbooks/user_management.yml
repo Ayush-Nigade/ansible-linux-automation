@@ -1,0 +1,11 @@
+---
+- name: User Management
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Create developer user
+      user:
+        name: developer
+        shell: /bin/bash
+        state: present
